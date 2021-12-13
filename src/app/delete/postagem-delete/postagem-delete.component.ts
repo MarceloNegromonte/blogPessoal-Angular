@@ -32,7 +32,7 @@ export class PostagemDeleteComponent implements OnInit {
     }
 
     this.idPost = this.route.snapshot.params['id']
-    this.findByIdPostagem(id)
+    this.findByIdPostagem(this.idPost)
   }
 
   findByIdPostagem(id: number){
