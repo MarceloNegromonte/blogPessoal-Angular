@@ -10,6 +10,17 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
 })
 export class AuthService {
 
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token),
+  };
+
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
+
   constructor(
     private http: HttpClient
   ) { }
